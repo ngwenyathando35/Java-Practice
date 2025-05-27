@@ -1,0 +1,19 @@
+package dogtriathlonparticipant;
+/*
+ * Filename TestDogs.java
+ * Written by The Textbook pg 219
+ * Written on 16/04/2020
+ * Description : Instantiates onjects for the DogTrialthlonParticipant
+ */
+public class TestDogs2
+{
+    public static void main(String[] args)
+    {
+        DogTriathlonParticipant dog1 = new DogTriathlonParticipant("Bowser", 2, 85, 89, 0);
+        dog1.display();
+        DogTriathlonParticipant dog2 = new DogTriathlonParticipant("Rush", 3, 78, 72, 80);
+        dog2.display();
+        DogTriathlonParticipant dog3 = new DogTriathlonParticipant("Ginger", 3, 90, 86, 72);
+        dog3.display();
+    }
+}

@@ -1,0 +1,11 @@
+
+public class HelloErrors 
+{
+	public static void (String[] args) 
+	{
+		System.out.println("Hello");
+		System.out.println("This is a test");
+
+	}
+
+}

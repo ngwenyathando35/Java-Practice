@@ -1,0 +1,72 @@
+namespace BankAtm
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int amount = 1000;
+            int deposit;
+            int withdraw;
+            int choice, pin = 0, x = 0;
+            Console.WriteLine("Enter your pin");
+            pin = int.Parse(Console.ReadLine());
+
+            while (true)
+            {
+                Console.WriteLine("********Welcome to ATM Service*******\n");
+
+                Console.WriteLine("1. Check Balance\n");
+                Console.WriteLine("2. Withdraw Cash\n");
+                Console.WriteLine("3. Deposit Cash\n");
+                Console.WriteLine("4. Exit\n");
+
+                Console.WriteLine("********************************\n\n");
+                Console.WriteLine("Enter your choice: ");
+                choice = int.Parse(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+                        Console.WriteLine("\n Your Balance in Rs :{0}", amount);
+                        break;
+
+                    case 2:
+                        Console.WriteLine("\n Enter the amount to withdraw: ");
+                        withdraw = int.Parse(Console.ReadLine());
+                        if(withdraw % 100 != 0)
+                        {
+                            Console.WriteLine("\n Please enter the smount in multiples of 100");
+
+                        }
+                        else if(withdraw > (amount - 500))
+                        {
+                            Console.WriteLine("\n Insufficent Funds");
+                        }
+                        else
+                        {
+                            amount = amount - withdraw;
+                            Console.WriteLine("\n\n Please collect cash");
+                            Console.WriteLine("\n Your current balance is {0}", amount);
+                        }
+                        break;
+
+                    case 3:
+                        Console.WriteLine("\n Ebter the smount you want to deposit");
+                        deposit = int.Parse(Console.ReadLine());
+                        amount = amount + deposit;
+                        Console.WriteLine("Your balance is {0}, amount");
+                        break;
+
+                    case 4:
+                        Console.WriteLine("\n Thank you fro using the ATM");
+                        break;
+
+                }
+
+            }
+            Console.WriteLine("\n\n Thanks for using our ATM service");
+
+        }
+    }
+}
+ 

@@ -1,0 +1,70 @@
+namespace SimpleCalculator
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            int FirstNum;
+            int SecNum;
+            int answer;
+            FirstNum = int.Parse(txtFirst.Text);
+            SecNum = int.Parse(txtSec.Text);
+            answer = FirstNum + SecNum;
+            MessageBox.Show("The Sum is: " + answer);
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        { 
+        }
+        private void btnSub_Click(object sender, EventArgs e)
+        {
+            int FirstNum;
+            int SecNum;
+            int answer;
+            FirstNum = int.Parse(txtFirst.Text);
+            SecNum = int.Parse(txtSec.Text);
+            answer = FirstNum - SecNum;
+            MessageBox.Show("The difference is " + answer);
+        }
+        private void btnMul_Click(object sender, EventArgs e)
+        {
+            int FirstNum;
+            int SecNum;
+            int answer;
+            FirstNum = int.Parse(txtFirst.Text);
+            SecNum = int.Parse(txtSec.Text);
+            answer = FirstNum * SecNum;
+            MessageBox.Show("The Product is " + answer);
+        }
+        private void radAdd_CheckedChanged(object sender, EventArgs e)
+        {
+            if(radAdd = checked)
+            {
+                btnAdd.Show();
+                btnSub.Hide();
+                btnMul.Hide();
+            }
+        }
+        private void radSub_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radAdd = checked)
+            {
+                btnAdd.Hide();
+                btnSub.Show();
+                btnMul.Hide();
+            }
+        }
+        private void radMul_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radAdd = checked)
+            {
+                btnAdd.Hide();
+                btnSub.Hide();
+                btnMul.Show();
+            }
+        }
+    }
+}

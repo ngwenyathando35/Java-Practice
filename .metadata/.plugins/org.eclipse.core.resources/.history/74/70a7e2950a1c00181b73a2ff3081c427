@@ -1,0 +1,40 @@
+/*
+ Programmer: Thando Ngwenya
+ Date: 25/02/2018
+ Programe: Neelofer's Homework
+ Description: Performs basic calculations requested by the user
+ */
+import java.util.Scanner;
+public class UserInput
+{
+	public static void main(String[] args)
+	{
+		int num1;
+		int num2;
+		int answer;
+		int sum;
+		int difference;
+		int multiply;
+		int divide;
+		
+		Scanner inputDevice = new Scanner(System.in);
+		System.out.print("Please a number >> ");
+		
+		num1 = inputDevice.nextInt();
+		System.out.print("Please enter another number >> ");
+		
+		num2 = inputDevice.nextInt();
+		
+		sum = num1 + num2;
+		difference = num1 - num2;
+		multiply = num1 * num2;
+		divide = num1 / num2;
+				
+		System.out.println("The sum of " + num1 + " and " + num2 + " is " + sum);
+		System.out.println("The product of " + num1 + " and " + num2 + " is " + multiply);
+		System.out.println("The difference of " + num1 + " and " + num2 + " is " + difference);
+		System.out.println("The quotient of " + num1 + " and " + num2 + " is " + divide);
+		
+				
+	}
+}

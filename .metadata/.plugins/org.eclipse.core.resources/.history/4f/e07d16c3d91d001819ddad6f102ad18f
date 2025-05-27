@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class MainClass 
+{
+	public static void main(String[] args) 
+	{	 Scanner Input = new Scanner(System.in);
+	int dollars,amount;
+	int twenties;
+	int tens;
+	int fives;
+	int ones;
+	int op;
+	
+	final int TWENTIES = 20;
+	final int TENS = 10;
+	final int FIVES = 5;
+	final int ONES = 1;
+	
+	System.out.print("Please enter a value>>");
+	dollars = Input.nextInt();
+	
+	System.out.print("Please choose an arithmatic operator>>\n1. +\n2.-\n3. *\n4./" );
+	twenties = dollars/TWENTIES;
+	amount = dollars - (twenties*TWENTIES);
+	
+	tens = dollars/TWENTIES;
+	
+	fives = dollars/FIVES;
+	
+	ones= dollars/ONES;
+	
+	System.out.print("\n\nThere are " + twenties + " twenties, " + tens + " tens, " + fives + " fives," + ones + " ones, in $" + dollars);
+	
+	
+	
+	
+	
+	
+	
+	
+		
+
+	}
+
+}

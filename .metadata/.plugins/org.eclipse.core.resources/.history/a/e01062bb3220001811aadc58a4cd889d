@@ -1,0 +1,50 @@
+import java.util.Scanner;
+public class MainClass 
+{
+	public static void main(String[] args) 
+	{	 Scanner Input = new Scanner(System.in);
+	double num1, num2;
+	int op;
+	Double sum, subtr, divide, mult;
+		
+	System.out.print("Please enter a value>>");
+	num1 = Input.nextDouble();
+	 
+	System.out.print("Please enter another value>>");
+	num2 = Input.nextDouble();
+	
+	System.out.print("Please choose an arithmatic operator>>\n1. +\n2.-\n3. *\n4./" );
+	op= Input.nextInt();
+	
+	switch (op)
+	{
+	case 1:
+		sum = num1 + num2;
+		System.out.print("The sum of " + num1 + " and " + num2 + " is " + sum);
+		break;
+		
+	case 2:
+		subtr = num1 - num2;
+		System.out.print("The difference of " + num1 + " and " + num2 + " is " + subtr);
+		break;
+		
+	case 3:
+		mult = num1 * num2;
+		System.out.print("The product of " + num1 + " and " + num2 + " is " + mult);
+		break;
+		
+	case 4:
+		divide= num1/num2;
+		System.out.print("The quotient of " + num1 + " by " + num2 + " is " + divide);
+		break;
+		
+		
+		
+	default:
+		System.out.print("The value you entered is invalid");
+		break;
+			
+	}
+		}
+
+}
